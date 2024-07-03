@@ -104,4 +104,4 @@ h = time // 3600
 m = (time % 3600) // 60
 s = time % 60
 
-print(f'{time}s = {h}h {m}m {s}s ')
+print(f'{time}s = {h}h {m}m {s}s ') 
