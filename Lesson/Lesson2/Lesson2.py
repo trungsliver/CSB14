@@ -34,7 +34,7 @@
 import random
     # Cú pháp sử dụng hàm: [Tên thư viện].[Tên hàm]
 rd = random.randint(1,10)
-
+# print(rd)
 # In ra bảng cửu chương dạng: 5 * 1 = 5
 # for i in range(1,11):
 #     print(f'{rd} * {i} = {rd*i}')
@@ -96,7 +96,7 @@ arrHS.append('Duc Trung')
 arrHS.insert(1, 'Imposter')
         # Chỉnh sửa phần tử
 arrHS[1] = 'Imposter 666'
-
+# print(arrHS)
     # Delete - Xóa phần tử
         # Xóa phần tử bằng giá trị - remove()
 arrHS.remove('Duc Trung')
@@ -151,11 +151,11 @@ for i in range(1,11):
 for i in range(5,16):
     arr2.append(i)
     # Hiện 2 danh sách
-print(arr1)
-print(arr2)
+# print(arr1)
+# print(arr2)
     # Tìm phần tử chung
 for item1 in arr1:
     for item2 in arr2:
         if item1 == item2:
             arr3.append(item1)
-print('Phần tử chung:' ,arr3)
+# print('Phần tử chung:' ,arr3)
