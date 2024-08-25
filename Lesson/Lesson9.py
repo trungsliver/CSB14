@@ -30,14 +30,17 @@ set3 = {1, 2, 3, 4, 5}
 set4 = {4, 5, 6, 7, 8}
     # union() - Hợp: trả về tập hợp chứa tất cả phần tử của 2 tập hợp
 result_u = set3.union(set4)
+result_u = set3 | set4
 print('Union:',result_u)     # Output: {1, 2, 3, 4, 5, 6, 7, 8}
 
     # intersection() - Giao: trả về tập hợp chứa phần tử chung
 result_i = set3.intersection(set4)
+result_i = set3 & set4
 print('Intersection:', result_i)    # Output: {4, 5}
 
     # difference() - Hiệu: trả về tập hợp chỉ chứa trong set1 mà không có trong set2
 result_d = set3.difference(set4)
+result_d = set3 - set4
 print('Difference:', result_d)     # Output: {1, 2, 3}
 
 # Duyệt phần tử
@@ -61,6 +64,17 @@ A.add(9)
     # YC2: Xóa phần tử 4 khỏi tập hợp B.
 B.remove(4)
 B.discard(4)
+    # YC3: Tìm hợp, giao, hiệu của hai tập hợp A và B.
+union_ab = A.union(B)
+intersection_ab = A.intersection(B)
+difference_ab = A.difference(B)
+
+print('Union:', union_ab)
+print('Intersection:', intersection_ab)
+print('Difference:', difference_ab)
 
 # Bài Tập 2: Kiểm Tra Tập Hợp
 # Yêu cầu: Cho tập hợp C = {'apple', 'banana', 'cherry'}. Kiểm tra xem 'banana' và 'grape' có trong tập hợp không.
+C = {'apple', 'banana', 'cherry'}
+print('banana' in C)    # Output = True
+print('grape' in C)    # Output = False
