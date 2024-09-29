@@ -21,3 +21,72 @@ def is_empty(queue):
 # print(queue1)
 # print(queue2)
 
+# ============ LUYỆN TẬP ===========
+# Bài 1: Dòng OOP và array/list để mô phỏng hoạt động của queue
+class Queue:
+    def __init__(self):
+        self.items = []
+    def is_empty(self):         # Kiểm tra queue rỗng
+        if len(self.items) == 0: return True
+        else: return False
+    def enqueue(self, item):    # Thêm phần tử vào hàng đợi
+        self.items.append(item)
+    def dequeue(self):          # Loại bỏ phần tử đầu tiên
+        if not self.is_empty():
+            return self.items.pop(0)
+    def peek(self):             # Trả về phần tử đầu tiên
+        if not self.is_empty():
+            return self.items[0]
+    def size(self):             # Trả về kích thước
+        return len(self.items)
+    def display(self):          # Hiển thị queue
+        print(self.items)
+    
+# Test
+# q = Queue()
+# for i in range(1,6): 
+#     q.enqueue(i)
+# print('Xóa và lấy giá trị:' ,q.dequeue())
+# print('Chỉ lấy phần tử đầu, không xóa:' ,q.peek())
+# q.display()
+# print('Kích thước:', q.size())
+
+# Bài 2: Mô phỏng hệ thống hàng đợi khách hàng
+# Giả sử bạn đang mô phỏng một hàng đợi khách hàng tại một siêu thị. 
+# Mỗi khách hàng có một số nhận dạng duy nhất. 
+# Viết chương trình sử dụng queue để quản lý khách hàng vào hàng đợi và phục vụ khách hàng.
+# Gợi ý: cần 3 phương thức
+    # 1. arrive: thêm khách hàng vào hàng đợi
+    # 2. serve: phục vụ khách hàng đầu tiên trong hàng đợi
+    # 3. waiting: số lượng khách hàng đang chờ
+
+class SupermarketQueue:
+    def __init__(self):
+        self.customers = []
+    def is_empty(self):
+        if len(self.customers) == 0: return True
+        else: return False
+    def arrive(self, customer_id):
+        self.customers.append(customer_id)
+        print(f'Customer {customer_id} has arrived')
+    def serve(self):
+        if not self.is_empty():
+            serve_customer = self.customers.pop(0)
+            print(f'Serving customer {serve_customer}')
+        else:
+            print('No customers to serve')
+    def waiting(self):
+        if not self.is_empty():
+            print('Customers are waiting:', len(self.customers))
+            print(self.customers)
+        else:
+            print('No customers is waiting')
+# Test
+supermarket = SupermarketQueue()
+for i in range(1,6): 
+    supermarket.arrive(i)   # Khách đến cửa hàng
+supermarket.serve()         # Phục vụ khách hàng 1
+supermarket.serve()         # Phục vụ khách hàng 2
+supermarket.waiting()       # Danh sách khách đang đợi
+
+# Bài 3: Ứng dụng MP3
