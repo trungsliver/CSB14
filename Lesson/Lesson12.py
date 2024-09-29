@@ -82,11 +82,53 @@ class SupermarketQueue:
         else:
             print('No customers is waiting')
 # Test
-supermarket = SupermarketQueue()
-for i in range(1,6): 
-    supermarket.arrive(i)   # Khách đến cửa hàng
-supermarket.serve()         # Phục vụ khách hàng 1
-supermarket.serve()         # Phục vụ khách hàng 2
-supermarket.waiting()       # Danh sách khách đang đợi
+# supermarket = SupermarketQueue()
+# for i in range(1,6): 
+#     supermarket.arrive(i)   # Khách đến cửa hàng
+# supermarket.serve()         # Phục vụ khách hàng 1
+# supermarket.serve()         # Phục vụ khách hàng 2
+# supermarket.waiting()       # Danh sách khách đang đợi
 
 # Bài 3: Ứng dụng MP3
+class MP3Player:
+    def __init__(self):
+        self.songs = []
+        self.current_song = None
+    def is_empty(self):
+        if len(self.songs) == 0: return True
+        else: return False
+    def add_song(self, song):
+        self.songs.append(song)
+        print(f'{song} has been added')
+    def play_next_song(self):
+        if not self.is_empty():
+            self.current_song = self.songs.pop(0)
+            print(f'Playing {self.current_song}')
+        else:
+            print('No more songs to play')
+    def skip_song(self):
+        if not self.current_song is None:
+            print(f'{self.current_song} is skipped')
+            self.current_song = None
+            self.play_next_song()
+        else:
+            print('No song to skip')
+    def playlist(self):
+        if not self.is_empty():
+            print('\nPlaylist:')
+            for i, song in enumerate(self.songs):
+                print(f'\t{i+1}. {song}')
+        else:
+            print('\nNo songs in playlist')
+
+# Test
+mp3 = MP3Player()
+mp3.add_song('Một con vịt')
+mp3.add_song('She knows')
+mp3.add_song('Falling down')
+mp3.playlist()
+mp3.play_next_song() # Playing Một con vịt
+mp3.play_next_song() # Playing She knows
+mp3.skip_song()
+mp3.skip_song()
+mp3.playlist()
