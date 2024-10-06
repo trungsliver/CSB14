@@ -54,10 +54,11 @@
     # 2. Làm đề kiểm tra TẠI NHÀ:
             # Đề sẽ được gửi trong buổi 13 (zalo)
             # Deadline: 12h đêm ngày 12/10/2024
+            # Quy tắc đặt tên: CSB14_[HoTen]_hackathon.py
 
 # Lựa chọn kiểm tra:
-# 1. Chu Quang Huy:
-# 2. Nguyễn Gia Bình:
-# 3. Trần Thành Đạt:
+# 1. Chu Quang Huy: Buổi 2 & buổi 6
+# 2. Nguyễn Gia Bình: Buổi 1 & buổi 6
+# 3. Trần Thành Đạt: Buổi 1 & buổi 12
 # 4. Lê Việt Anh:
 # 5. Bùi Khánh Ngọc Nghi:
