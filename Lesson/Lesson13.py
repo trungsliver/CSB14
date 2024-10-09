@@ -57,8 +57,8 @@
             # Quy tắc đặt tên: CSB14_[HoTen]_hackathon.py
 
 # Lựa chọn kiểm tra:
-# 1. Chu Quang Huy: Buổi 2 & buổi 6
-# 2. Nguyễn Gia Bình: Buổi 1 & buổi 6
+# 1. Chu Quang Huy: Buổi 1 & buổi 6
+# 2. Nguyễn Gia Bình: Buổi 1 & buổi 2
 # 3. Trần Thành Đạt: Buổi 1 & buổi 12
 # 4. Lê Việt Anh:
 # 5. Bùi Khánh Ngọc Nghi:
