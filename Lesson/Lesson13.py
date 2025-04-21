@@ -6,6 +6,9 @@
     # Câu điều kiện
     # Vòng lặp (for - while)
 
+for i in range(6, 16, 2):
+    print(i)
+
 # Buổi 2: List/Aray, Function, Files
     # List/Array: CRUD
     # Function: Tạo hàm, truyền tham số, trả về giá trị

@@ -62,43 +62,43 @@ def measure_time(func, *args):
     end_time = time.time()
     return end_time - start_time
 
-# Tìm kiếm tuần tự
-# random_list = [random.randint(1, 200000000) for _ in range(200000000)]
-# target = random.choice(random_list)
-# time_seq = measure_time(sequential_search, random_list, target)
-# print(f'Thời gian tìm kiếm tuần tự: {time_seq:.8f} giây')
+# # Tìm kiếm tuần tự
+random_list = [random.randint(1, 200000000) for _ in range(200000000)]
+target = random.choice(random_list)
+time_seq = measure_time(sequential_search, random_list, target)
+print(f'Thời gian tìm kiếm tuần tự: {time_seq:.8f} giây')
 
 # Tìm kiếm nhị phân
-# sorted_list = sorted(random_list)
-# time_bin = measure_time(binary_search, sorted_list, target)
-# print(f'Thời gian tìm kiếm nhị phân: {time_bin:.8f} giây')
+sorted_list = sorted(random_list)
+time_bin = measure_time(binary_search, sorted_list, target)
+print(f'Thời gian tìm kiếm nhị phân: {time_bin:.8f} giây')
 
-# Đọc - ghi file
-    # Mở file để ghi
-file = open('l6.txt', 'w')
+# # Đọc - ghi file
+#     # Mở file để ghi
+# file = open('l6.txt', 'w')
 
-    # Ghi nội dung vào file
-        # Ghi 1 chuỗi
-file.write('Hello world!')
-        # Ghi nhiều dòng
-lines = ['1st line\n', '2nd line \n', '3rd line \n']
-file.writelines(lines)
-        # Dùng with để ghi
-with open('l6_p2.txt', 'w') as file:
-    file.write('This is 2rd file!!!')
+#     # Ghi nội dung vào file
+#         # Ghi 1 chuỗi
+# file.write('Hello world!')
+#         # Ghi nhiều dòng
+# lines = ['1st line\n', '2nd line \n', '3rd line \n']
+# file.writelines(lines)
+#         # Dùng with để ghi
+# with open('l6_p2.txt', 'w') as file:
+#     file.write('This is 2rd file!!!')
 
-    # Mở file để đọc
-file = open('l6.txt', 'r')
-    # Đọc toàn bộ nội dung file
-content = file.read()
-print(content)
-    # Đọc từng dòng
-for line in file:
-    print(line, end = '')
-    # Dùng with để đọc
-with open('l6_p2.txt', 'r') as file:
-    content = file.read()
-    print(content)
+#     # Mở file để đọc
+# file = open('l6.txt', 'r')
+#     # Đọc toàn bộ nội dung file
+# content = file.read()
+# print(content)
+#     # Đọc từng dòng
+# for line in file:
+#     print(line, end = '')
+#     # Dùng with để đọc
+# with open('l6_p2.txt', 'r') as file:
+#     content = file.read()
+#     print(content)
 
-    # Đóng file
-file.close()
+#     # Đóng file
+# file.close()
